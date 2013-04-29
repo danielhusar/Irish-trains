@@ -8,7 +8,7 @@
     "nodejitsu",
     "deployment"
   ],
-  "version": "0.1.0-30",
+  "version": "0.1.0-32",
   "author": "Daniel Husar <dano.husar@gmail.com>",
   "repository": {
     "type": "git",

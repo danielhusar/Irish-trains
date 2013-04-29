@@ -129,7 +129,7 @@
 					$li = $('<li />').html('<h5>'+ train.Origin +' ('+ train.Origintime +' ) - '+ train.Destination +' ('+ train.Destinationtime +')</h5> \
 																	<span>Departure: '+ ((train.Schdepart !== '00:00') ? train.Schdepart : train.Expdepart) +'</span> \
 																');
-					$trainsWrap.prepend($li);
+					$trainsWrap.append($li);
 
 				});
 			}else{
