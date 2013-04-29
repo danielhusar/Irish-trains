@@ -1,0 +1,142 @@
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+body{
+	padding: 0;
+	overflow-x: hidden;
+	min-width: 320px;
+}
+#wrap{
+	padding-top: 40px;
+}
+#wrap nav{
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	top: 0;
+	color: white;
+	padding: 0 2%;
+	.gradient(#0088cc, #0044cc);
+}
+#wrap nav .icons{
+  position: absolute;
+  top: 5px;
+  left: 2%;
+}
+#wrap nav .icons .icon{
+	width: 25px;
+	height: 25px;
+  background: url("../img/sprite.png") no-repeat 0 0;
+}
+#wrap nav .icons .icon.rotate{
+	.transition(1200ms ease);
+	.transformHW(rotate(360deg));
+}
+#wrap nav .icons .icon-back{
+  background-position: -25px 0;
+  display: none;
+}
+#wrap nav h1,
+#wrap nav h2{
+	margin: 0 auto;
+	padding: 2px 0 0 0;
+	text-align: center;
+	font-weight: normal;
+	font-size: 1.3em;
+}
+#wrap.page-trains nav h1,
+#wrap.page-trains nav .icons .icon-reload{
+	display: none;
+}
+#wrap nav h2{
+	font-size: 1.2em;
+	display: none;
+}
+#wrap.page-trains nav h2,
+#wrap.page-trains  nav .icons .icon-back{
+	display: block;
+}
+
+
+.loading-bar{
+	margin: 30px auto;
+	display: none;
+}
+.loading .loading-bar{
+	display: block;
+}
+.loading ul {
+	display: none;
+}
+
+.container{
+	min-height: 100%;
+	width: 200%;
+	min-width: 200%;
+	clear: both;
+	overflow: hidden;
+	padding: 0;
+	.transformTransition(400ms ease);
+}
+section{
+	width: 50%;
+  padding: 10px 1% 0;
+	float: left;
+}
+.page-trains .container{
+	.transformHW(translate(-50%, 0));
+}
+.no-csstransforms .page-trains .container{
+	left: -100%;
+}
+section h2{
+	font-size: 1.4em;
+}
+#stations ul li{
+	height: 50px;
+	padding: 5px;
+	font-size: 1.2em;
+	overflow: hidden;
+	margin-bottom: 5px;
+	background: #ecf4fb;
+	cursor: pointer;
+	border: 1px solid #dfeefa;
+}
+#stations ul li:hover{
+	background: #bddffd;
+}
+#stations ul li span{
+	display: block;
+	font-size: 0.7em;
+	color: #bbb;
+}
+#stations ul li a{
+	float: right;
+	margin-top: 5px;
+}
+
+#trains ul li{
+	padding: 5px;
+	font-size: 1.2em;
+	overflow: hidden;
+	margin-bottom: 5px;
+	background: #70fec7;
+	border: 1px solid #dfeefa;
+}
+
+#trains ul li.error{
+	font-size: 0.9em;
+	background: #fe8288;
+}
+#trains ul li h5{
+	margin: 0;
+}
+#trains ul li span{
+	display: block;
+	font-size: 0.7em;
+	color: #888;
+}
+
+
