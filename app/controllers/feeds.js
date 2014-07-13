@@ -7,7 +7,7 @@
  * @param  {object} app     app object
  * @param  {object} model   model object that belong to the current controller
  * @param  {object} helpers helpers object
- * @return {void} 
+ * @return {void}
  */
 
 var _ = require('underscore'),
@@ -28,17 +28,17 @@ module.exports = function(app, model, helpers){
 			while (length--) {
 				station = stations[length];
 				stations[length].dist = helpers.distance({
-																									lat: req.params.lat, 
-																									lng:  req.params.lng
-																								 }, 
-																								 {
-																									lat: station.StationLatitude, 
-																									lng: station.StationLongitude
-																								 });
+					lat: req.params.lat,
+					lng:  req.params.lng
+				},
+				{
+					lat: station.StationLatitude,
+					lng: station.StationLongitude
+				});
 			}
 
-			stations = _.sortBy(stations, function(station){ 
-				return station.dist; 
+			stations = _.sortBy(stations, function(station){
+				return station.dist;
 			});
 
 			res.writeHead(200, {'Content-Type': 'application/json'});
